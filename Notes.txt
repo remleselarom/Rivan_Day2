@@ -38,3 +38,31 @@ Rivan-vManage# request vedge add chassis-num 5f4be17b-8e6a-46ae-9467-35b26f5d569
 
 vBond
 Rivan-vBond# request vedge add chassis-num 5f4be17b-8e6a-46ae-9467-35b26f5d569a serial-num 07
+
+
+*******************
+RESTCONF
+-443
+-HTTPS
+-JSON/YAML | YANG MODELING
+*******************
+NETCONF
+-830
+-SSH
+-RPC (Remote Procedural Calls)
+-XML
+-YANG
+__NETCONF Operations__
+  <get>           > retrieve configuration/state  
+  <get-config>    > retrieve a datastore  
+  <edit-config>   > push configuration  
+  <delete-config> > delete configuration  
+  <copy-config>   > copy datastore  
+===================================
+guestshell enable
+-UTM-PH#guestshell run python3
+-UTM-PH#guestshell run bash
+
+***********************
+Note: guestshell supports IOX
+***********************
