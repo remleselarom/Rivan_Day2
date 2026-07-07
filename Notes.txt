@@ -1,1 +1,11 @@
+Traditional Networking / Distributed Control Plane
+-Control Plane
+-Management Plane
+-Data Plane
 
+
+Viptela SDWAN
+* vEDGE      - vEDGE
+* vBOND      - cVALIDATOR
+* vSMART     - cCONTROLLER
+* vMANAGE    - cMANAGER
