@@ -9,3 +9,32 @@ Viptela SDWAN
 * vBOND      - cVALIDATOR
 * vSMART     - cCONTROLLER
 * vMANAGE    - cMANAGER
+
+
+Controller LOGIN
+admin
+C1sc0123
+
+Configuring Template
+1. Create Feature Template for EDGE (vEdge Cloud)
+-SYSTEM > VE-SYSTEM
+:Baud rate: 9600
+2. VE-VPN-0
+3. VE-VPN512
+4. VE-INT-ETH0
+
+Import Certificate
+vEdge-MINDANAO# request root-cert-chain install /home/admin/pkicerts/rivan.ca
+Generate CSR
+vEdge-MINDANAO# request csr upload /home/admin/pkicerts/mindanao.csr
+PKI Server
+PKI-SERVER# crypto pki server rivanpki req pkcs10 terminal
+vEdge-MINDANAO# vshell
+vEdge-MINDANAO:~$ cat /home/admin/pkicerts/mindanao.csr
+vEdge-MINDANAO# request certificate install /home/admin/pkicerts/grant.ca
+
+vManager
+Rivan-vManage# request vedge add chassis-num 5f4be17b-8e6a-46ae-9467-35b26f5d569a serial-num 07
+
+vBond
+Rivan-vBond# request vedge add chassis-num 5f4be17b-8e6a-46ae-9467-35b26f5d569a serial-num 07
